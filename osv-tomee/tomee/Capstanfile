@@ -1,0 +1,16 @@
+base: cloudius/osv-openjdk
+
+cmdline: >
+  /java.so
+  -javaagent:/usr/tomee/lib/openejb-javaagent.jar
+  -cp /usr/tomee/bin/bootstrap.jar:/usr/tomee/bin/tomcat-juli.jar
+  -Djava.util.logging.config.file=/usr/tomee/conf/logging.properties
+  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+  -Djava.endorsed.dirs=/usr/tomee/endorsed
+  -Dcatalina.base=/usr/tomee
+  -Dcatalina.home=/usr/tomee
+  -Djava.io.tmpdir=/usr/tomee/temp
+  org.apache.catalina.startup.Bootstrap
+  start
+
+build: make

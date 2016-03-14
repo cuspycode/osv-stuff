@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -e
+VERSION=1.7.4
+PROFILE=jaxrs
+
+archive=apache-tomee-$VERSION-$PROFILE.tar.gz
+dir=apache-tomee-$PROFILE-$VERSION
+
+mkdir -p upstream
+pushd upstream
+wget http://archive.apache.org/dist/tomee/tomee-${VERSION}/$archive
+tar zxvf $archive
+
+pushd $dir
+for p in $(find ../../patches/perf/ -name '*.patch' | sort); do
+    echo "Applying $p"
+    patch -p1 < $p
+done
+popd
+
+popd
+
+
+mkdir ROOTFS
+mkdir -p ROOTFS/usr/tomee
+mv upstream/$dir/* ROOTFS/usr/tomee
