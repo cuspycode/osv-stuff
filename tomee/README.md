@@ -1,6 +1,8 @@
 # TomEE deployment on OSv
 
-Based on Tomasz Grabiec's tomcat build project (but not its tomcat image), using TomEE 1.7.4 instead of Tomcat.
+Based on cloudius-systems [tomcat build project](https://github.com/cloudius-systems/osv-apps/tree/master/tomcat)
+(but not its tomcat image), originally by Tomasz Grabiec.
+Modified to use TomEE 1.7.4 instead of Tomcat 8.0.15.
 
 This is still a bit raw, and I haven't attempted to replicate any of the patches in the original osv-tomcat project.
 
