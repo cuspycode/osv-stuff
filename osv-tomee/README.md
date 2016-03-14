@@ -7,7 +7,7 @@ This is still a bit raw, and I haven't attempted to replicate any of the patches
 How to build:
 - Install the OSv development environment on your build host.
 - Install capstan on your build host (the binary install is fine).
-- Download this folder and cd to it.
+- Download the `tomee` folder and cd to it.
 - Do `capstan build` to create the tomee image.
 
 How to run:
