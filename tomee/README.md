@@ -16,7 +16,7 @@ How to build:
 - Do `capstan build` to create the tomee image. This is optional, the build step will happen
   automatically the first time you do `capstan run`.
 
-Optionally change the download URL in the file [GET](tomee/GET) to a mirror if things seem slow.
+Optionally change the download URL in the file [GET](GET) to a mirror if things seem slow.
 
 How to run:
 - Do `capstan run -f 8080:8080` to run an instance in qemu, forwarding its port 8080 to the hypervisor's 8080.
