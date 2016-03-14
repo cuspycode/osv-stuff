@@ -13,4 +13,4 @@ How to build:
 How to run:
 - Do `capstan run -f 8080:8080` to run an instance in qemu, forwarding its port 8080 to the hypervisor's 8080.
 
-To add your own configuration and WAR files etc, edit `Makefile` and commands to copy stuff to `ROOTFS/usr/tomee` in the `module` target.
+To add your own configuration and WAR files etc, edit `Makefile` and add commands to copy stuff to `ROOTFS/usr/tomee` in the `module` target.
